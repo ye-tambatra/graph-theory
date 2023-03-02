@@ -1,6 +1,6 @@
-def depth_first_search(graph, start_vertex):
+def depthFirstSearch(graph, startVertex):
     visited = []
-    queue = [start_vertex]
+    queue = [startVertex]
     while queue:
         vertex = queue.pop()
         if vertex not in visited:
