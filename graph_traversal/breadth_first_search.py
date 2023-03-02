@@ -1,11 +1,11 @@
-def depthFirstSearch(graph, startVertex):
+def breadthFirstSearch(graph, startVertex):
     visited = []
-    stack = [startVertex]
-    while stack:
-        vertex = stack.pop()
+    queue = [startVertex]
+    while queue:
+        vertex = queue.pop(0)
         if vertex not in visited:
             visited.append(vertex)
             for i in range(len(graph)):
                 if graph[vertex][i] != 0 and i not in visited:
-                    stack.append(i)
+                    queue.append(i)
     return visited
