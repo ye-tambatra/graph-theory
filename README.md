@@ -1,7 +1,11 @@
 # Implementation of some graph concepts
 
-## 1 - Graph traversal
+## Graph traversal Algorithm
 
-### a - Depth first search
+    - Depth first search
+    - Breadth first search
 
-### b - Breadth first search
+## Shortest path Algorithm
+
+    - Moore dijkstra
+    - Bellman Ford
