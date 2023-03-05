@@ -16,8 +16,11 @@ def mooreDijkstra(graph, source):
         # Mark the selected vertex as proceeded
         proceeded[min] = True
 
-        # Updating distances and predecessors
         for i in range(n):
+            # Negative distances not supported
+            if graph[min][i] < 0:
+                raise Exception("Negative distance detected. No solution")
+            # Updating distances and predecessors
             if graph[min][i] != 0 and distances[i] > distances[min] + graph[min][i]:
                 distances[i] = distances[min] + graph[min][i]
                 predecessors[i] = min
